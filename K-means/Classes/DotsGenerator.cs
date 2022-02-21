@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Media;
+using System.Collections.ObjectModel;
+
 
 namespace K_means.ViewModels
 {
@@ -13,7 +15,7 @@ namespace K_means.ViewModels
 
             for (int i = 0; i < numOfDots; i++)
             {
-                dots.Add(new Dot() { X = randCoordinates.Next(0, windowWidth), Y = randCoordinates.Next(0, windowHeight), Color = Brushes.Black });
+                dots.Add(new Dot(randCoordinates.Next(0, windowWidth), randCoordinates.Next(0, windowHeight)));
             }
 
             return dots;

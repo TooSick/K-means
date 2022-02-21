@@ -3,23 +3,20 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Windows.Media;
+using System.Collections.ObjectModel;
 
 namespace K_means.ViewModels
 {
-    class ViewModel : INotifyPropertyChanged
+    class ViewModel
     {
         public List<Dot> Dots { get; set; }
+        public List<Dot> Clasters { get; set; }
 
         public ViewModel(int numOfDots, int windowWidth, int windowHeight)
         {
             Dots = DotsGenerator.Generation(numOfDots, windowWidth, windowHeight);
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName] string prop = "")
-        {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(prop));
+            
         }
     }
 }

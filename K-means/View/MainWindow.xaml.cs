@@ -25,7 +25,7 @@ namespace K_means
         {
             InitializeComponent();
 
-            DataContext = new ViewModel(1000, (int)mainWindow.Width, (int)mainWindow.Height);
+            DataContext = new ViewModel(10, 500, 500);
         }
     }
 }
