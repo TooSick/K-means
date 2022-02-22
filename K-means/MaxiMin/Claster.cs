@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-
+using System.Windows.Media;
 
 namespace K_means.MaxiMin
 {
@@ -9,6 +9,7 @@ namespace K_means.MaxiMin
         public List<Dot> ClasterDots { get; private set; }
         public Dot DotAtMaxDist { get; set; }
         public int DistanceToDotAtMaxDist { get; set; }
+        public Brush Color { get; set; }
 
         public Claster()
         {

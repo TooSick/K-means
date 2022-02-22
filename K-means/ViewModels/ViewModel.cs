@@ -16,7 +16,7 @@ namespace K_means.ViewModels
         public ViewModel(int numOfDots, int windowWidth, int windowHeight)
         {
             Dots = DotsGenerator.Generation(numOfDots, windowWidth, windowHeight);
-            
+            Classes.KMeans.AlgorithmExecution(Dots);
         }
     }
 }
